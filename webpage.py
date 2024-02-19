@@ -30,6 +30,13 @@ def login():
         except AuthApiError as e:
             st.error(f"로그인 실패: {e}")
             return False
+    if st.button("회원가입"):
+        try:
+            supabase.auth.sign_up({"email": email, "password": password})
+            st.success(f"회원가입 성공: {email[:-2]}")
+        except AuthApiError as e:
+            st.error(f"회원가입 실패: {e}")
+
 
 
 # 로그아웃 기능
