@@ -1,15 +1,11 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
 from supabase import create_client, Client
 from gotrue.errors import AuthApiError
 
-# .env 파일로부터 환경 변수 로드
-load_dotenv()
-
 # Supabase 연결 설정
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+url = "https://yuijzwcqrdzhrnbmypxu.supabase.co"
+key = ("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1aWp6d2NxcmR6aHJuYm15cHh1Iiwicm"
+       "9sZSI6ImFub24iLCJpYXQiOjE3MDgzMzQzNTcsImV4cCI6MjAyMzkxMDM1N30.F7oejhngT32UV0bZBLKlxLe6cMF8OO_YffS6nhS3fFY")
 supabase: Client = create_client(url, key)
 
 
