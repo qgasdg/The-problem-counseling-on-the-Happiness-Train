@@ -1,3 +1,4 @@
+pip == 23.2.1
 annotated_types == 0.6.0
 anyio == 4.3.0
 deprecation == 2.1.0
