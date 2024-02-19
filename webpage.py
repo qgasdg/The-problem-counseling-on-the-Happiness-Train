@@ -38,7 +38,6 @@ def login():
             st.error(f"회원가입 실패: {e}")
 
 
-
 # 로그아웃 기능
 def logout():
     st.session_state.user = None
